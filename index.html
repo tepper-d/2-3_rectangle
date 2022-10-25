@@ -1,0 +1,58 @@
+<!---------------------------------------------------
+CIS 124: Introduction to JavaScript
+Murach JavaScript & jQuery, 4th ed
+Chapter 2: Get started fast with JavaScript
+Exercise 2-3 Create a simple application
+Annamae Nguyen & Dominique Tepper, 08OCT2022
+
+Area = L * W
+Perimeter = 2L + 2W
+----------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- correct page title added. -Nguyen & Tepper, 08OCT2022 -->
+    <title>The Area and Perimeter Calculator</title>
+
+    <!-- corrected link to css file. -Nguyen & Tepper, 08OCT2022 -->
+    <link rel="stylesheet" href="rectangle.css">
+</head>
+<body>
+    <main>
+
+        <!-- Fixed page header. Nguyen & Tepper, 08OCT2022 -->
+        <h1>The Area and Perimeter Calculator</h1>
+        <script>
+            "use strict";
+
+            // get rectangle length, accepts decimal input
+            // Nguyen & Tepper, 08OCT2022
+            const length = parseFloat(prompt("Enter rectangle's length:"));
+
+            // get rectangle width, accepts decimal input
+            // Nguyen & Tepper, 08OCT2022
+            const width = parseFloat(prompt("Enter rectangle's width:"));
+
+            // calculates area = L * W
+            // Nguyen & Tepper, 08OCT2022
+            const area = parseFloat(length*width);
+
+            // calculates perimeter = 2L + 2W
+            // Nguyen & Tepper, 08OCT2022
+            const perimeter = parseFloat((2*length)+(2*width));
+
+            // display results, limits display to 2 decimal places
+            // Nguyen & Tepper, 08OCT2022
+            const result = `<p><label>Length: </label>${length.toFixed(2)}</p>
+                <p><label>Width: </label>${width.toFixed(2)}</p>
+                <p><label>Area: </label>${area.toFixed(2)}</p>
+                <p><label>Perimeter: </label>${perimeter.toFixed(2)}</p>`;
+            document.write(result);
+        </script>
+    </main>
+</body>
+</html>
